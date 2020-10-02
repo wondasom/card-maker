@@ -1,0 +1,4 @@
+@value makerGreen, makerPink from './common/colors.css';
+h1 {
+	color: makerPink;
+}
