@@ -14,28 +14,28 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
 
 	const history = useHistory();
 	const onLogout = () => {
-    authService.logout();
-  };
+		authService.logout();
+	};
 
 	useEffect(() => {
-    if (!userId) {
-      return;
-    }
-    const stopSync = cardRepository.syncCards(userId, cards => {
-      setCards(cards);
-    });
-    return () => stopSync();
-  }, [userId]);
+		if (!userId) {
+			return;
+		}
+		const stopSync = cardRepository.syncCards(userId, (cards) => {
+			setCards(cards);
+		});
+		return () => stopSync();
+	}, [userId, cardRepository]);
 
 	useEffect(() => {
-    authService.onAuthChange(user => {
-      if (user) {
-        setUserId(user.uid);
-      } else {
-        history.push('/');
-      }
-    });
-  });
+		authService.onAuthChange((user) => {
+			if (user) {
+				setUserId(user.uid);
+			} else {
+				history.push('/');
+			}
+		});
+	}, [userId, history, authService]);
 
 	const createOrUpdateCard = (card) => {
 		setCards((cards) => {
