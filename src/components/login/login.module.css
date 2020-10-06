@@ -1,4 +1,4 @@
-@value makerGreen, makerWhite, makerLightPink from "../../common/colors.css";
+@value makerGreen, makerWhite, makerPink from "../../common/colors.css";
 
 .login {
 	width: 30em;
@@ -7,6 +7,10 @@
 	flex-direction: column;
 	justify-content: center;
 	background-color: makerWhite;
+}
+
+.title{
+	font-family: myriad-pro, sans-serif;
 }
 
 .list {
@@ -33,5 +37,5 @@
 }
 
 .button:hover {
-	background-color: makerLightPink;
+	background-color: makerPink;
 }

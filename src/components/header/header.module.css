@@ -1,4 +1,4 @@
-@value makerGreen, makerWhite, makerBlack from "../../common/colors.css";
+@value makerGreen, makerWhite, makerPink, makerBlack from "../../common/colors.css";
 
 .header {
 	width: 100%;
@@ -15,17 +15,24 @@
 .title {
 	margin: 0;
 	color: makerWhite;
+	font-family: myriad-pro, sans-serif;
 }
 
 .logout {
 	position: absolute;
 	right: 3em;
 	top: 1em;
-	padding: 0.8em;
+	padding: 0.8em 2em;
 	border-radius: 8em;
-	background-color: makerBlack;
+	background-color: makerPink;
 	color: makerWhite;
 	outline: 0;
 	border: 0;
 	cursor: pointer;
+	font-family: myriad-pro, sans-serif;
+	font-weight: 700;
+}
+
+.logout:hover {
+	opacity: 0.9;
 }

@@ -1,10 +1,10 @@
-@value makerShadow, makerBlack, makerWhite, makerWheat from "../../common/colors.css";
+@value makerShadow, makerBlack, makerLightGrey, makerWhite, makerWheat , makerColorful from "../../common/colors.css";
 
 .card {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	background-color: yellow;
+	background-color: makerLightGrey;
 	margin-bottom: 0.5em;
 	border-radius: 1em;
 	padding: 0.2em 0;
@@ -21,10 +21,19 @@
 	background-color: makerWhite;
 	color: makerBlack;
 }
-/* .card.colorful {
-	background-color: makerBlack;
+
+.card.colorful {
+	background: rgb(34, 63, 141);
+	background: linear-gradient(
+		90deg,
+		rgba(34, 63, 141, 1) 1%,
+		rgba(105, 180, 160, 0.9556197478991597) 22%,
+		rgba(255, 190, 77, 0.9752275910364145) 46%,
+		rgba(216, 73, 67, 0.9332107843137255) 71%,
+		rgba(239, 147, 148, 1) 100%
+	);
 	color: makerWhite;
-} */
+}
 
 .avatar {
 	width: 10em;
@@ -45,8 +54,9 @@
 .email,
 .message {
 	margin: 0;
-	font-size: 0.8rem;
+	font-size: 0.85rem;
 	margin-bottom: 0.2em;
+	font-weight: 500;
 }
 
 .name {
