@@ -7,7 +7,7 @@
 
 - [x] have editor - preview sections
 - [x] have login feature using Google firebase
-- [x] use realtime database using GOogle firebase
+- [x] use realtime database using Google firebase
 - [x] have image upload features using Cloudinary
 - [x] have state management using React Hooks
 
